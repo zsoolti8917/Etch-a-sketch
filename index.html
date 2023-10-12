@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zsolt Varjú">
+    <meta name="description" content="Etch a sketch for learning purposes, coded by Zsolt Varjú">
+    <title>Etch a sketch</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <script src="dist/js/main.js" defer></script>
+</head>
+
+<body>
+
+    <main>
+        <form class="controls">
+            <div class="controls__slider">
+                <label for="slider">Select grid size</label>
+                
+                <input type="range" id="slider" name="slider" min="16" max="64" step="8" value="16">
+                <output class="slider-output" for="slider"></output>
+            </div>
+            <hr>
+            <div class="controls__colors">
+                <div class="controls__colors-background">
+                    <label for="bgcolor">Background color:</label>
+                    <input type="color" id="bgcolor" name="bgcolor" value="#ff0000">
+                    <label for="bgcolor" id="bgcolor-label"></label>
+
+                </div>
+                <hr>
+                <div class="controls__colors-pencil">
+                    <label for="pencolor">Pencil color:</label>
+                    <input type="color" id="pencolor" name="pencolor" value="#ff0000">
+                    <label for="bgcolor" id="pencolor-label"></label>
+                </div>
+            </div>
+        </form>
+
+        <section class="grid">
+
+        </section>
+    </main>
+
+</body>
+
+</html>

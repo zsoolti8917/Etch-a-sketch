@@ -1,0 +1,102 @@
+body {
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: beige;
+  max-width: 800px;
+  width: 100%;
+  min-height: 600px;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+main .controls {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  margin-top: 6rem;
+  gap: 1rem;
+}
+main .controls__slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+main .controls__colors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+main .controls__colors-background {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .controls__colors-background #bgcolor {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+main .controls__colors-background #bgcolor::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+main .controls__colors-background #bgcolor::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+main .controls__colors-pencil {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .controls__colors-pencil #pencolor {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+main .controls__colors-pencil #pencolor::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+main .controls__colors-pencil #pencolor::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+main .grid {
+  height: 500px;
+  width: 500px;
+  border: black 1px solid;
+  display: grid;
+}
+main .grid div {
+  width: auto;
+  height: auto;
+  border: 1px solid black;
+}
+main hr {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */
