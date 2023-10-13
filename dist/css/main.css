@@ -89,11 +89,13 @@ main .grid {
   width: 500px;
   border: black 1px solid;
   display: grid;
+  z-index: 1;
 }
 main .grid div {
   width: auto;
   height: auto;
   border: 1px solid black;
+  z-index: 5;
 }
 main hr {
   border: none;

@@ -9,6 +9,7 @@ bgcolorLabel.style.color = bgcolorButton.value;
 bgcolorButton.oninput = function() {
     bgcolorLabel.innerHTML = bgcolorButton.value;
     bgcolorLabel.style.color = bgcolorButton.value;
+    container.style.backgroundColor = bgcolorButton.value;
 }
 
 /* COLORPICKER PENCIL */
@@ -31,14 +32,13 @@ output.textContent = slider.value + " x " + slider.value;
 
 slider.addEventListener("input", () => {
   output.textContent = slider.value + " x " + slider.value;
-  let gridValue = Math.ceil(Math.sqrt(slider.value));
+  let gridValue = Math.ceil(slider.value);
   
   container.style.gridTemplateColumns = `repeat(${gridValue}, 1fr)`;
-  console.log( container.style.gridTemplateColumns = `repeat(${gridValue}, 1fr)`);
-    container.innerHTML = "";
-  for(let i = 0; i <slider.value; i++){
+  container.style.gridTemplateRows = `repeat(${gridValue}, 1fr)`;
+  container.innerHTML = "";
+  for(let i = 0; i <slider.value * slider.value; i++){
     addElement(container);
-    console.log(`div added ${i} times`)
   }
 
   
@@ -49,5 +49,23 @@ slider.addEventListener("input", () => {
 
 function addElement($mainDiv){
     const newDiv = document.createElement("div");
-    document.querySelector(".grid").appendChild(newDiv);
+    document.querySelector(".grid").appendChild(newDiv).classList.add("square");
 }
+
+/* DIV EVENTLISTENER */
+container.addEventListener("mousedown", () =>{
+    const divs = document.querySelectorAll(".square")
+    let isMousePressed = true;
+
+    container.addEventListener("mouseup", () => {
+        isMousePressed = false;
+        container.removeEventListener("mouseup",null);
+      });
+
+    divs.forEach( elem => {
+        elem.addEventListener("mousemove", () =>{
+            if(isMousePressed)elem.style.backgroundColor = pencolorButton.value;
+        })
+    })
+})
+
