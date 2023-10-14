@@ -13,8 +13,9 @@
 
 <body draggable="false">
 
-    <main draggable="false">
+    <main draggable="false" class="main">
         <form class="controls">
+            <hr>
             <div class="controls__slider">
                 <label for="slider">Select grid size</label>
                 
@@ -25,17 +26,33 @@
             <div class="controls__colors">
                 <div class="controls__colors-background">
                     <label for="bgcolor">Background color:</label>
-                    <input type="color" id="bgcolor" name="bgcolor" value="#ff0000">
-                    <label for="bgcolor" id="bgcolor-label"></label>
+                    <div class="container">
+                        <input type="color" id="bgcolor" name="bgcolor" value="#d38d8d">
+                        <label for="bgcolor" id="bgcolor-label"></label>
+                    </div>
+                    
 
                 </div>
                 <hr>
                 <div class="controls__colors-pencil">
                     <label for="pencolor">Pencil color:</label>
-                    <input type="color" id="pencolor" name="pencolor" value="#ff0000">
-                    <label for="bgcolor" id="pencolor-label"></label>
+                    <div class="container">
+                        <input type="color" id="pencolor" name="pencolor" value="#ff0000">
+                        <label for="bgcolor" id="pencolor-label"></label>
+                    </div>
+                    
                 </div>
             </div>
+            <hr>
+            <div class="controls__buttons">
+                <button type="button" class="btn on" id="draw">Draw</button>
+                <button type="button" class="btn" id="eraser">Eraser</button>
+                <button type="button" class="btn" id="rainbow">Rainbow</button>
+                <button type="button" class="btn" id="darken">Darken</button>
+                <button type="button" class="btn" id="lighten">Lighten</button>
+                <button type="button" class="btn" id="clear">Clear</button>
+            </div>
+            <hr>
         </form>
 
         <section class="grid" draggable="false">

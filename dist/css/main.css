@@ -7,7 +7,7 @@ body {
 }
 
 main {
-  background-color: beige;
+  background-color: #f5f5dc;
   max-width: 800px;
   width: 100%;
   min-height: 600px;
@@ -24,7 +24,6 @@ main .controls {
   display: flex;
   flex-direction: column;
   height: 500px;
-  margin-top: 6rem;
   gap: 1rem;
 }
 main .controls__slider {
@@ -44,8 +43,13 @@ main .controls__colors-background {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+}
+main .controls__colors-background .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 main .controls__colors-background #bgcolor {
   border-radius: 50%;
@@ -66,8 +70,13 @@ main .controls__colors-pencil {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+}
+main .controls__colors-pencil .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 main .controls__colors-pencil #pencolor {
   border-radius: 50%;
@@ -84,12 +93,37 @@ main .controls__colors-pencil #pencolor::-webkit-color-swatch {
   border: none;
   border-radius: 50%;
 }
+main .controls__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+main .controls__buttons .btn {
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 0.5rem 1rem;
+}
+main .controls__buttons .btn:hover {
+  transform: scale(1.1);
+}
+main .controls__buttons .on {
+  background-color: #a16363;
+  color: white;
+  transform: scale(1.1);
+}
 main .grid {
   height: 500px;
   width: 500px;
   border: black 1px solid;
   display: grid;
   z-index: 1;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  background-color: #d38d8d;
 }
 main .grid div {
   width: auto;
